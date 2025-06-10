@@ -1,0 +1,138 @@
+@echo OFF
+Title Sid's Piracy Support Installer
+setlocal EnableDelayedExpansion
+cls
+::Welcome to piracy!!. 
+color 0a
+echo.
+echo =======================================
+echo "                                     "
+echo "                                     "                                                                                                                                                               
+echo "           ..#@@@@@@@@#:.            "
+echo "          .#@@@@@@@@@@@@$.           "
+echo "         .*@@@@@@@@@@@@@@#.          "
+echo "         .#@@@@@@@@@@@@@@@.          "
+echo "          +@@@@@@@@@@@@@@*.          "
+echo "          .@@*+*@@@@*+*@@.           "
+echo "          +$   ..@@..  .#*           "
+echo "          :@@+#@@-:@@#+@@-           "
+echo "       ... .:.#@@+*@@#.... .         "
+echo "     ..@@#.  .+MMMMMM+.  .+@@:       "
+echo "    .$@@@@#.. ..:--:..  .+@@@@@.     "
+echo "     ...-*@@@*..     .+@@@$+--.      "
+echo "           .-%@@#:.*@@@=..           "
+echo "              .=@@@@=.               "
+echo "           .+@@@+..+@@@=.            "
+echo "    .:+*#$@@@-.     ..=@@@$*==..     "
+echo "    .$@@@@=.            .+@@@@$.     "
+echo "      .@@+               .*@@.       "
+echo "       .                    .        "
+echo =======================================
+echo.
+echo ===========================================================================================================
+echo  Do not be alarmed. This is from your tumblr mutual. I promise this is not going to do anything malicious.
+echo ===========================================================================================================
+echo.
+echo ===========================================================================================================
+echo  You might be asked to let the program install on your device. Do not worry. Click accept and allow.
+echo  This is expected.
+echo ===========================================================================================================
+echo.
+pause
+cls
+color 4f
+echo .
+echo =======================================
+echo "                                     "
+echo "                                     "                                                                                                                                                               
+echo "           ..#@@@@@@@@#:.            "
+echo "          .#@@@@@@@@@@@@$.           "
+echo "         .*@@@@@@@@@@@@@@#.          "
+echo "         .#@@@@@@@@@@@@@@@.          "
+echo "          +@@@@@@@@@@@@@@*.          "
+echo "          .@@*+*@@@@*+*@@.           "
+echo "          +$   ..@@..  .#*           "
+echo "          :@@+#@@-:@@#+@@-           "
+echo "       ... .:.#@@+*@@#.... .         "
+echo "     ..@@#.  .+MMMMMM+.  .+@@:       "
+echo "    .$@@@@#.. ..:--:..  .+@@@@@.     "
+echo "     ...-*@@@*..     .+@@@$+--.      "
+echo "           .-%@@#:.*@@@=..           "
+echo "              .=@@@@=.               "
+echo "           .+@@@+..+@@@=.            "
+echo "    .:+*#$@@@-.     ..=@@@$*==..     "
+echo "    .$@@@@=.            .+@@@@$.     "
+echo "      .@@+               .*@@.       "
+echo "       .                    .        "
+echo =======================================
+echo .
+echo ========================================================================================================
+echo  This is just to confirm that you are doing this of your own free will. 
+echo  Consent is very important on the hellsite.
+echo ========================================================================================================
+echo .
+echo . 
+pause
+cls
+color 0f
+pause
+:CheckpointStart
+echo .
+echo =======================================
+echo      What would you like to do?
+echo =======================================
+echo          Options:
+echo  1 Set me to be a full pirate.
+echo        This installs all necessary software.
+echo  2 Let me customise my installs.
+echo        Opens more complex menu.
+set /p checkpoint="Please select an option menu? <1/2>"
+if %checkpoint%==1 goto :FullInstall
+if %checkpoint%==2 goto :CustomMenu
+    else 
+    echo "Error. Please only enter "1" or "2"."
+    Pause
+    goto :CheckpointStart
+:FullInstall
+color 0a
+echo .
+echo =======================================
+echo You have reached Full Installer
+echo =======================================
+echo We will now be installing the most recent
+echo updates of the following open-source softwares.
+echo 1. 7zip
+echo 2. qBittorrent
+echo 3. Microsoft Store
+echo =======================================
+echo You will be asked to accept permission. 
+echo Please do so. Thank you.
+echo =======================================
+pause
+cls
+winget install -e --id 7zip.7zip
+winget install -e --id c0re100.qBittorrent-Enhanced-Edition
+winget install -e --id MSIX\Microsoft.WindowsStore_22504.1401.19.0
+pause
+echo =======================================
+echo =======================================
+echo All installations are complete.
+echo =======================================
+echo Welcome Aboard, ship's mate!!
+echo =======================================
+echo =======================================
+echo.
+echo.
+echo.
+echo Best of luck for your adventures.
+echo Press any key to exit.
+pause
+start https://thepiratebay.org/
+exit
+:CustomMenu
+color 0b
+echo You have reached Custom menu
+pause
+pause
+pause
+exit 
